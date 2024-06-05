@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void Subsequence(String str, int idx, String result){
+        if(idx == str.length()){
+            System.out.println(result);
+            return;
+        }
+        
+        char currChar = str.charAt(idx);
+        Subsequence(str, idx+1, result+currChar);
+        Subsequence(str, idx+1, result);
+    }
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    String str = "abc";
+	    //String result = "";
+	    Subsequence(str,0, "");
+
+	}
+}
