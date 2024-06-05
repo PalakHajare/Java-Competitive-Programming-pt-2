@@ -1,0 +1,26 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static int find(int [] array, int index, int value, int last){
+	    if(index==array.length){
+	        return last ;
+	    }
+	    if(array[index] == value){
+	        last = index;
+	       
+	    }
+	    
+	    return find(array, index + 1, value, last);
+	}
+	    
+	    
+	public static void main (String[] args) throws java.lang.Exception{
+		int[] array = {5,4,4,4,3,2,1};
+		
+		int value = 4;
+	    System.out.print(find(array,0,value,-1));
+	}
+}
